@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lr_3_1</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="Styles/lab3_2.css">
+	<script src="JS/script.js"></script>
+	<script src="JS/animation.js"></script>
+	<link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+</head>
+<body>
+	<header>
+		<div class="layer1"></div>
+		<div class="eye"></div>
+		<div class="layer3"></div>
+		<div class="list"></div>
+		<div class="strings"></div>
+		<div class="description">
+			<p class="texts">
+				ProHosting Corporation, founded in 1995, is a Web hosting company with its principal office in Provo, Utah. ProHosting, with well over 700,000 hosted Web sites, is a worldwide leader in Web hosting services and is on the cutting edge of Web hosting technology.<br><br> ProHosting offers a wide array of Web hosting services such as Web hosting, e-commerce, domain name registration, banner exchange program, Web designer directory, a variety of reseller and agent programs, and search engine submissions.
+			</p>
+		</div>
+		<div class="tabs">	
+			<span class="texts">	
+				<a href="lr_3_1.html">home</a> | <a href="">about us </a> | <a href="">contact us</a> | <a href="">support  </a> | <a href="" class="help">help</a>
+			</span>
+		</div>		
+	</header>
+	<div class="mainPart">	
+		<div class="art">
+			<div>
+				<input id = "but" onclick='AnimationEnter()' type="button" value="Click here for register">
+				<div class="pattern">
+					<form id='form' action="" method="post">
+						<input type="text" id="fName" placeholder="First name:"><br>
+						<input type="text" id="mName" placeholder="Middle name:"><br>
+						<input type="text" id="lName" placeholder="Last name:"><br>
+						<select id="pref" size="3" multiple >
+							<option disabled>Choose preferences:</option>
+							<option value="Sport">Sport</option>
+							<option value="Music">Music</option>
+							<option value="Art">Art</option>
+							<option value="Programming">Programming</option>
+							<option value="Dancing">Dancing</option>
+							<option value="Knitting">Knitting</option>
+							<option value="Photographing">Photographing</option>
+						</select>
+						<input onclick='Cheking()' id="confirm" type="button" value="Submit">
+					</form>
+				</div>
+				<div class="CorrectInput">
+					<div id="nonEmptyFName">
+						First name is non empty.
+					</div>
+					<div id="nonEmptyMName">
+						Midle name is non empty.
+					</div>
+					<div id="nonEmptyLName">
+						Last name is non empty.
+					</div>
+					<div id="emptyFName">
+						Empty first name!
+					</div>
+					<div id="emptyMName">
+						Empty middle name!
+					</div>
+					<div id="emptyLName">
+						Empty last name!
+					</div>
+					<div id="more3Pref">
+						U can't to choose more than 3 preferences!
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="newsHeader"> 
+			<span class="texts">.::NEWS::.</span>
+		</div>
+		<div class="news">
+			<p class="texts">
+				<br>Sept 4 2002<br>
+				ProHosting releases new and improved Web site,<br> and Account<br> administration utility.<br><br>Notice:<br>Due to the increase of spam filters (i.e. with hotmail.com and others), please include ProHosting.com on your recipient list so you can receive notices and e-mail invoices from ProHosting.com. ProHosting offers a wide array of services such as Unix and NT/Windows 2000 Web 
+				hosting, e-commerce, domain name registration, search engine submission, multiple reseller programs and a variety of other valuable services.
+			</p>
+		</div>
+	</div>
+	<script>
+		document.getElementById('fName').onkeypress=function(e){
+			return !(/[0-9]/.test(String.fromCharCode(e.charCode)));
+		}
+		document.getElementById('mName').onkeypress=function(e){
+			return !(/[0-9]/.test(String.fromCharCode(e.charCode)));
+		}
+		document.getElementById('lName').onkeypress=function(e){
+			return !(/[0-9]/.test(String.fromCharCode(e.charCode)));
+		}
+	</script>
+</body>
+</html>
